@@ -29,7 +29,7 @@ public class Qes7 {
 			}
 			scanner.close();
 			
-			//生徒ごとの平均点
+			// 生徒ごとの平均点
 			for(int i = 0; i < num; i++) {
 				
 				double sum = 0.0d;
@@ -48,7 +48,7 @@ public class Qes7 {
 			
 			System.out.println("");
 			
-			//各科目の平均点
+			// 各科目の平均点
 			for(int j = 0; j < 4; j++) {
 				
 				int sum = 0;
@@ -64,27 +64,30 @@ public class Qes7 {
 				System.out.println(sub[j] + "の平均点は" + String.format("%.2f", ave) + "点です。");
 			}
 			
-			//全体の平均点
+			// 全体の平均点
 			
 			int all = 0;
-			double ave = 0.0d;
-			int n =0;
 			
-			for(int i = 0; i < score.length; i++) {
+			double ave = 0.0d;
+			
+			int count = 0;
+			
+			for(int i = 0; i < num; i++) {
 				
 				int sum = 0;
 				
 				for(int j = 0; j < sub.length; j++) {
 					
 					sum += score[i][j];
-					n += i;
 					
+					count++;
 				}
 				
 				all += sum ;
-				
-				ave = ((double)all / n);
 			}
+			
+			ave = ((double) all / count);
+			
 			System.out.println("全体の平均点は" + String.format("%.2f", ave) + "点です。");
 	}
 }
