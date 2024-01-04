@@ -12,18 +12,14 @@ public class Name {
 	
 	public Name(String name) {
 		
-		this.name = scan.nextLine();
+		name = scan.nextLine();
+		System.out.println("こんにちは「 "+ name +" 」さん");
 		
 	}
 
-	public Name() {
-		
-	}
 
 	public String getName() {
-		
 		return this.name;
-			
 	}
 	
 	public void setName(String name) {
